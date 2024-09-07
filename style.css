@@ -2,23 +2,24 @@
 
 body {
   background: linear-gradient(105deg,rgb(45, 30, 108) 0%,rgb(121, 103, 193) 100%);
+  font-family: Arial, sans-serif;
 }
 
 main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  gap: 32px;
 }
 
 h1 {
-  margin-bottom: 5rem;
+  margin-bottom: 0;
   font-size: 108px;
   font-family: "Anton SC", sans-serif;
   color: rgb(210, 78, 78);
   line-height: 74px;
   font-weight: 800;
+  text-align: center;
 }
 
 h1 .tic {
@@ -31,12 +32,48 @@ h1 .toe {
   letter-spacing: 2px;
 }
 
+form#playerNames {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+form#playerNames.hide {
+  display: none;
+}
+
+form#playerNames input {
+  background-color: rgb(64, 51, 116);
+  border: 2px solid rgb(121, 103, 193);
+  padding: 8px 16px;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.playerInfo {
+  display: none;
+}
+.playerInfo.show{
+  color: white;
+  font-size: 24px;
+  display: block;
+  margin-top: 24px;
+}
+.playerInfo .player1 {
+  color: rgb(210, 78, 78);
+}
+.playerInfo .player2 {
+  color: rgb(238, 238, 83);
+}
+
 .board {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6px;
-  width: 400px;
-  height: 400px;
+  /* width: 400px; */
+  /* height: 400px; */
   background-color: rgb(121, 103, 193);
   padding: 8px;
   border-radius: 24px;
@@ -50,10 +87,13 @@ h1 .toe {
   cursor: pointer;
   border-radius: 24px;
   line-height: 0;
+  width: 130px;
+  height: 130px;
 }
 
 .playerTwo .cell:hover,
-.cell.o {
+.cell.o,
+.cell.o:hover {
   background-color: rgb(238, 238, 83);
   color: rgb(121, 103, 193);
 }
@@ -63,7 +103,8 @@ h1 .toe {
 }
 
 .cell:hover,
-.cell.x {
+.cell.x,
+.playerTwo .cell.x:hover {
   background-color: rgb(210, 78, 78);
   color: white;
 }
@@ -71,4 +112,37 @@ h1 .toe {
 .cell:active {
   background-color: rgb(152, 44, 44);
   color: white;
+}
+
+.game-log {
+  height: 32px;
+  padding: 48px 16px 16px 16px;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.game-controls {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.game-controls button,
+form#playerNames button {
+  padding: 8px 16px;
+  font-size: 18px;
+  background-color: rgb(210, 78, 78);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.game-controls button:hover,
+form#playerNames button:hover {
+  background-color: rgb(152, 44, 44);
 }

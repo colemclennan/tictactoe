@@ -8,24 +8,52 @@
 </head>
 <body>
   <main>
-    <h1>
-      <span class="tic">TIC</span><br>
-      <span class="tac">TAC</span><br>
-      <span class="toe">TOE</span>
-    </h1>
-    <div class="board">
-      <!-- <button class="cell" data-cell="0"></button>
-      <button class="cell" data-cell="1"></button>
-      <button class="cell" data-cell="2"></button>
-      <button class="cell" data-cell="3"></button>
-      <button class="cell" data-cell="4"></button>
-      <button class="cell" data-cell="5"></button>
-      <button class="cell" data-cell="6"></button>
-      <button class="cell" data-cell="7"></button>
-      <button class="cell" data-cell="8"></button> -->
+    <div class="left-side">
+      <h1>
+        <span class="tic">TIC</span><br>
+        <span class="tac">TAC</span><br>
+        <span class="toe">TOE</span>
+      </h1>
+      <form action="" id="playerNames">
+        <input type="text" name="player1" id="player1" placeholder="Player 1">
+        <input type="text" name="player2" id="player2" placeholder="Player 2">
+        <button type="submit">Start Game</button>
+      </form>
+      <div class="playerInfo">
+        <div class="player player1">
+          <span class="player-one-name">Player 1</span>
+          -
+          <span class="player-one-score">0</span>
+        </div>
+        <div class="player player2">
+          <span class="player-two-name">Player 2</span>
+          -
+          <span class="player-two-score">0</span>
+        </div>
+        <div class="ties">
+          Ties -
+          <span class="tie-score">0</span>
+        </div>
+      </div>
     </div>
-    <div class="game-controls">
-      <button class="restart">Restart</button>
+    <div class="right-side">
+      <div class="game-information">
+        <div class="game-log"></div>
+      </div>
+      <div class="board">
+        <!-- <button class="cell" data-cell="0"></button>
+        <button class="cell" data-cell="1"></button>
+        <button class="cell" data-cell="2"></button>
+        <button class="cell" data-cell="3"></button>
+        <button class="cell" data-cell="4"></button>
+        <button class="cell" data-cell="5"></button>
+        <button class="cell" data-cell="6"></button>
+        <button class="cell" data-cell="7"></button>
+        <button class="cell" data-cell="8"></button> -->
+      </div>
+      <div class="game-controls">
+        <button class="reset">Reset</button>
+      </div>
     </div>
   </main>
   <script src="main.js"></script>
